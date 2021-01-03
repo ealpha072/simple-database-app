@@ -10,6 +10,18 @@
   </div>
   <a href="index.php">Back to home</a>
   </form>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
 
 <?php include "footer.php";?>
 
