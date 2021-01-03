@@ -7,6 +7,7 @@
 
       $searchQuery = "SELECT * FROM users WHERE location=$location";
       $results = mysqli_query($conn, $searchQuery);
+      
     }
 ?>  
 <h2>Find user by Location</h2>
