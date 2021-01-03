@@ -3,7 +3,7 @@
   <form action="" method="post">
     <div class="form-group">
       <label for="location">Location</label>
-      <input type="text" class="form-control" id="location" placeholder="Another ">
+      <input type="text" class="form-control" id="location" placeholder="Search by location">
     </div>
     <div class="form-group">
       <button class="btn btn-primary">View Results</button>
