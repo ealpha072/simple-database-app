@@ -24,4 +24,6 @@
     <button class="btn btn-primary" name="submit">Submit</button>
   </div>
   </form>
+
+  <a href="index.php">Back to home</a>
 <?php include "footer.php";?>
