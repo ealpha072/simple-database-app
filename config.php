@@ -6,12 +6,17 @@
   
   $conn = mysqli_connect($servername,$username,$password,$database);
 
-  if($conn){
-    echo "Success";
-  }else{
-    die("Failed ". mysqli_connect_error());
+  if (isset($_POST['submit'])) {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email  = $_POST['email'];
+    $location = $_POST['location'];
+    $age = $_POST['age'];
+
+    //form validation
+    
+
+    $mysql  = "INSERT INTO users (firstname,lastname,email,age,location) values ('$firstname','$lastname','$email','$age','$location')";
+    mysqli_query($conn,$mysql);
   }
-
-
-
 ?>
