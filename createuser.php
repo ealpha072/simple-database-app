@@ -1,12 +1,19 @@
 <?php include "header.php";?>
-
+<?php require "config.php"; ?>
 <?php
   $firstname = $lastname = $email = $location = $age = '';
 
   if (isset($_POST['submit'])) {
-    require "config.php";
-    $mysql  = "INSERT INTO users (firstname,lastname,email,age,location) values ('')"
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email  = $_POST['email'];
+    $location = $_POST['location'];
+    $age = $_POST['age'];
 
+    //form validation
+
+    $mysql  = "INSERT INTO users (firstname,lastname,email,age,location) values ('$firstname','$lastname','$email','$age','$location')";
+    mysqli_query($conn,$mysql);
   }
 
 
