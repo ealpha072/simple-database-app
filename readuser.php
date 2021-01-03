@@ -1,4 +1,14 @@
 <?php include "header.php";?>
+<?php include "config.php";?>
+
+<?php 
+  if(isset($_POST['submit-location'])){
+      $location = $_POST['location'];
+
+      $searchQuery = "SELECT * FROM users WHERE location=$location";
+      $results = mysqli_query($conn, $searchQuery);
+    }
+?>  
 <h2>Find user by Location</h2>
   <form action="" method="post">
     <div class="form-group">
