@@ -20,7 +20,7 @@
         <th scope="col">Location</th>
         <th scope="col">Age</th>
         <th scope="col">Date</th> 
-        <th scope="col">Edit</th> 
+        <th scope="col" span-col='2' class='text-center'>Action</th> 
       </tr>
     </thead>
     <tbody>
@@ -34,6 +34,7 @@
             <td><?php echo $row['age'];?></td>
             <td><?php echo $row['date'];?></td>
             <td><a href="updatesingle.php?id=<?php echo $row['id'];?>">Edit</a></td>
+            <td><a href="delete.php?id=<?php echo $row['id'];?>">Delete</a></td>
           </tr>
           <?php }?>
     </tbody>
