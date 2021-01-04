@@ -12,9 +12,8 @@
     $delquery = "DELETE FROM users WHERE id ='$id' ";
     $results = mysqli_query($conn,$delquery);
     #$success = "User deleted successfully!!";
-
-
   }
+
   $displayquery = "SELECT * FROM users";
   $results = mysqli_query($conn, $displayquery);
   $rows = mysqli_fetch_all($results, MYSQLI_ASSOC);
@@ -56,3 +55,4 @@
           <?php }?>
     </tbody>
   </table>
+  <a href="index.php">Home</a>
