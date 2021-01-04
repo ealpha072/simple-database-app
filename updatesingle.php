@@ -1,6 +1,32 @@
-<?php
-  require "config.php";
-  require "header.php";
+<?php require "config.php";
+
+  if(isset($_POST['submit'])){
+
+    $id=$_POST['id'];
+    $firstname=$_POST['firstname'];
+    $lastname=$_POST['lastname'];
+    $email=$_POST['email'];
+    $age=$_POST['age'];
+    $location=$_POST['location'];
+    $date=$_POST['date'];
+  
+
+    $updatequery = "UPDATE users 
+      SET 
+        id = $id,
+        firstname = $firstname,
+        lastname = $lastname,
+        email = $email,
+        age = $age,
+        location = $location,
+        date = $date
+      WHERE id = id";
+
+    $updatedb = mysqli_query($conn,$updatequery);
+  }else{
+    echo "Error updating database ";
+  }
+
 
   if(isset($_GET['id'])){
     #echo $_GET['id'];
@@ -15,8 +41,14 @@
   }
 ?>
 
+<?php  require "header.php";?>
+
+<?php if(isset($_POST['submit'])){?>
+<h3><?php echo $_POST['firstname'];?> updated successfully!!</h3>
+<?php }?>
+
 <h2>Update User</h2>
-<form action="" method="">
+<form action="" method="post">
   <?php 
     foreach ($user as $key => $value) : ?>
     <div class="form-group">
