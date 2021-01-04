@@ -1,4 +1,10 @@
-<?php require "config.php";
+<?php 
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "test";
+
+  $conn = mysqli_connect($servername,$username,$password,$database);
 
   if(isset($_POST['submit'])){
 
@@ -13,18 +19,16 @@
 
     $updatequery = "UPDATE users 
       SET 
-        id = $id,
-        firstname = $firstname,
-        lastname = $lastname,
-        email = $email,
-        age = $age,
-        location = $location,
-        date = $date
-      WHERE id = id";
+        id = '$id',
+        firstname = '$firstname',
+        lastname = '$lastname',
+        email = '$email',
+        age = '$age',
+        location = '$location',
+        date = '$date'
+      WHERE id = '$id'";
 
     $updatedb = mysqli_query($conn,$updatequery);
-  }else{
-    echo "Error updating database ";
   }
 
 
