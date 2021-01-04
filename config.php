@@ -15,8 +15,6 @@
 
     $mysql  = "INSERT INTO users (firstname,lastname,email,age,location) values ('$firstname','$lastname','$email','$age','$location')";
     mysqli_query($conn,$mysql);
-
-    
   }
 
   
