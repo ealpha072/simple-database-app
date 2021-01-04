@@ -48,7 +48,7 @@
 <?php  require "header.php";?>
 
 <?php if(isset($_POST['submit'])){?>
-<h3><?php echo $_POST['firstname'];?> updated successfully!!</h3>
+<h6><?php echo $_POST['firstname'];?> updated successfully!!</h6>
 <?php }?>
 
 <h2>Update User</h2>
