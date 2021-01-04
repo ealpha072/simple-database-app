@@ -39,6 +39,7 @@
     </tbody>
   </table>
   <?php } else {?>
-    <h3>No results found for location <?php echo $_POST['location'];?></h3>
+    <h3>No results found for your location</h3>
   <?php }?>
+  <a href="index.php">Home</a>
 
