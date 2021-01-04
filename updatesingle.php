@@ -62,7 +62,6 @@
         name="<?php echo $key;?>" 
         id="<?php echo $key?>" 
         value="<?php echo $value;?>"
-        placeholder = 'Enter new "<?php echo $key;?>"'
         <?php if($key === 'id'){
                 echo "readonly";
               }else {
