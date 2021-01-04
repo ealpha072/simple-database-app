@@ -8,7 +8,7 @@
   
   if(mysqli_num_rows($results) > 0){
     $rows = mysqli_fetch_all($results, MYSQLI_ASSOC); ?>
-    
+
     <table class="table table-striped table-dark">
     <thead>
       <tr>
@@ -18,7 +18,8 @@
         <th scope="col">E-mail</th>
         <th scope="col">Location</th>
         <th scope="col">Age</th>
-        <th scope="col">Date</th>  
+        <th scope="col">Date</th> 
+        <th scope="col">Edit</th> 
       </tr>
     </thead>
     <tbody>
@@ -31,6 +32,7 @@
             <td><?php echo $row['location'];?></td>
             <td><?php echo $row['age'];?></td>
             <td><?php echo $row['date'];?></td>
+            <td><a href="updatesingle.php?id=<?php echo $row['id'];?>">Edit</a></td>
           </tr>
           <?php }?>
     </tbody>
