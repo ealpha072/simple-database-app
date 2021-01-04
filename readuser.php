@@ -23,14 +23,14 @@
       $results = mysqli_query($conn, $searchQuery);
 
       if(mysqli_num_rows($results) > 0){
-        $rows = mysqli_fetch_assoc($results);?>
-        <?php foreach($rows as $row){
-          echo $row;}?>
+        #echo mysqli_num_rows($results)."<br>";
+        $rows = mysqli_fetch_all($results, MYSQLI_ASSOC);
+        ?>
         <table class="table table-striped table-dark">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
+            <th scope="col">First Name</th>
             <th scope="col">Last</th>
             <th scope="col">E-mail</th>
             <th scope="col">Location</th>
@@ -38,20 +38,19 @@
             <th scope="col">Date</th>  
           </tr>
         </thead>
-        <!--<tbody>
-          <?php 
-            foreach($rows as $row){ echo $row?>
-            <tr>
-              <td><?php echo $row['id'];?></td>
-              <td><?php echo $row['firstname'];?></td>
-              <td><?php echo $row['lastname'];?></td>
-              <td><?php echo $row['email'];?></td>
-              <td><?php echo $row['age'];?></td>
-              <td><?php echo $row['location'];?></td>
-              <td><?php echo $row['date'];?></td>
-            </tr>
-            <?php }?>
-        </tbody>-->
+        <tbody>
+              <?php foreach($rows as $row){?>
+              <tr>
+                <td><?php echo $row['id'];?></td>
+                <td><?php echo $row['firstname'];?></td>
+                <td><?php echo $row['lastname'];?></td>
+                <td><?php echo $row['email'];?></td>
+                <td><?php echo $row['location'];?></td>
+                <td><?php echo $row['age'];?></td>
+                <td><?php echo $row['date'];?></td>
+              </tr>
+              <?php }?>
+        </tbody>
       </table>
       <?php } else {?>
         <h3>No results found for location <?php echo $_POST['location'];?></h3>
