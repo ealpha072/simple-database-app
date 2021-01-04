@@ -10,3 +10,6 @@ This is a simple database application for creating, reading, updating and deleti
 ## To do:
   * Add CRSF for more security
   * Consider other security concerns.
+  
+ Database name= test;
+ Table name = users;
