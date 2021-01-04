@@ -1,5 +1,6 @@
-<?php require "header.php";?>
-<?php include "config.php";?>
+<?php require "header.php";
+      include "config.php";
+?>
 
 <h2>Update users</h2>
 <?php 
