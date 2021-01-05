@@ -1,10 +1,4 @@
-<?php 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "test";
-
-  $conn = mysqli_connect($servername,$username,$password,$database);
+<?php require "config.php";
 
   if(isset($_POST['submit'])){
 

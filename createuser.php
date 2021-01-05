@@ -1,6 +1,17 @@
-<?php include "header.php";?>
-<?php require "config.php"; ?>
-<?php 
+<?php include "header.php";
+       require "config.php";
+
+  if (isset($_POST['submit'])) {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email  = $_POST['email'];
+    $location = $_POST['location'];
+    $age = $_POST['age'];
+    
+    $mysql  = "INSERT INTO users (firstname,lastname,email,age,location) values ('$firstname','$lastname','$email','$age','$location')";
+    mysqli_query($conn,$mysql);
+  }
+
   if(isset($_POST['submit'])){
     echo $_POST["firstname"]. " added succesfully!!!!";
   }
