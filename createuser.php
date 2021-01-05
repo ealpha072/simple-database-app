@@ -18,7 +18,7 @@
 ?>
 
   <h1>Add a user</h1>
-  <form action="" method = 'post'>
+  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = 'post'>
     <div class="form-group">
       <label for="firstname">First Name</label>
       <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" required>
